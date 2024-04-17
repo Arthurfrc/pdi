@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.0.0)
+project("NOME DO ARQUIVO" VERSION 0.1.0 LANGUAGES C CXX)
+
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+add_executable("NOME DO ARQUIVO" "NOME DO ARQUIVO".cpp)
+target_link_libraries("NOME DO ARQUIVO" ${OpenCV_LIBS})
+
+
+AVISO: Para rodar o código, é preciso copiar o código acima no arquivo CMakeLists.txt, colocando o nome do arquivo no local indicado e seguir os passos.
+
+1- Rodar o comando 'cmake .' (caso esteja dentro da pasta com o programa o arquivo CMakeLists),
+ou 'cmake ..' (caso esteja uma pasta acima o arquivo CMakeLists)
+
+2- Rodar o comando 'make "NOME DO ARQUIVO" '
+
+3- Rodar o comando './"NOME DO ARQUIVO" '
