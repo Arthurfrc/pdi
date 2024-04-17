@@ -7,6 +7,7 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable("NOME DO ARQUIVO" "NOME DO ARQUIVO".cpp)
 target_link_libraries("NOME DO ARQUIVO" ${OpenCV_LIBS})
 
+//------------------------------------------------------------
 
 AVISO: Para rodar o código, é preciso copiar o código acima no arquivo CMakeLists.txt, colocando o nome do arquivo no local indicado e seguir os passos.
 
