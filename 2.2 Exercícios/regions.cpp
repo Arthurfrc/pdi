@@ -5,20 +5,20 @@ int main(int, char**) {
   cv::Mat image;
   cv::Vec3b val;
 
-  int P1, P2;
+  cv::Point P1, P2;
 
   image = cv::imread("biel.png", cv::IMREAD_GRAYSCALE);
   if (!image.data) std::cout << "nao abriu o arquivo.png" << std::endl;
 
   cv::namedWindow("janela", cv::WINDOW_AUTOSIZE);
 
-  std::cout << "Diga um valor para P1:" ;
-  std::cin >> P1;
-  std::cout << "Diga um valor para P2:" ;
-  std::cin >> P2;
+  std::cout << "Digite as coordenadas para P1: (x e depois y)" << std::endl ;
+  std::cin >> P1.x >> P1.y;
+  std::cout << "Digite as coordenadas para P2: (x e depois y)" << std::endl ;
+  std::cin >> P2.x >> P2.y;
 
-  for (int i = P1; i < P2; i++) {
-    for (int j = P1; j < P2; j++) {
+  for (int i = P1.x; i < P2.x; i++) {
+    for (int j = P1.y; j < P2.y; j++) {
         image.at<uchar>(i, j) = 255 - image.at<uchar>(i,j);
     }
   }
