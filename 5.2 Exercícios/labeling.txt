@@ -1,0 +1,17 @@
+A rotulação com mais de 255 objetos em cena pode ficar comprometida por causa de que em uma escala de cor, os valores vão apenas de 0 à 255, sendo assim, não teria como diferenciar mais objetos em cena.
+Uma solução para isso é utilizar um outro tipo de dado no lugar do '<uchar>', como um 'short' ou 'int', que podem armazenar mais do que apenas 255 valores distintos.
+Então ao invés de utilizar o tipo 'Mat', pode ser usado o tipo 'Mat1s', e trocasse também a chamada da função FloodFill para refletir estas mudanças.
+Abaixo as linhas alteradas no código de "Labeling.cpp" para tais mudanças.
+
+Mat1s image, realce; // alterado para Mat1s
+. . .
+if (image(i, j) == 255) { // alterado para utilizar o novo tipo de dado
+      // achou um objeto
+      nobjects++;
+      // para o floodfill as coordenadas
+      // x e y são trocadas.
+      p.x = j;
+      p.y = i;
+      // preenche o objeto com o contador
+      floodFill(image, p, nobjects); // alterado para utilizar o novo tipo de dado
+}
