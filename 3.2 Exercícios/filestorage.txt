@@ -1,0 +1,4 @@
+Como a primeira imagem tem o dobro de barras pretas e brancas da segunda imagem,
+a imagem de comparação capta essa diferença e demonstra essa diferença visualmente,
+com ondas maiores em branco onde existem essas maiores diferenças e ondas menores
+onde as barras brancas e pretas estão em uma posição parecida em ambas.
