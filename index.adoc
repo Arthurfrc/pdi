@@ -1,0 +1,7 @@
+= Processamento Digital de Imagens
+Arthur Felipe Rodrigues Costa
+:toc: left
+:icons: font
+
+Esta é uma página para as listas de PDI, criada com AsciiDoc e hospedada no GitHub Pages.
+
